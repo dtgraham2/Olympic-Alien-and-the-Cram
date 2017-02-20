@@ -1,0 +1,21 @@
+﻿.content {
+    resize: vertical;
+	overflow: auto;
+	height: 150px;
+	width: 10%;
+	max-width: 150em;
+	margin: 0 auto;
+	padding-left: .95em .95em;
+	padding-top: 0.25em 0.625em;
+	padding-bottom: 0.25em 0.625em;
+	border-radius: 30px;
+    border: 2px solid #E5AE22;
+	border-style: dotted dashed dotted dashed;
+	background: #118c4e; 
+    background: -webkit-linear-gradient(#DC5E43, #C83F21);
+    background: -o-linear-gradient(#DC5E43, #C83F21); 
+    background: -moz-linear-gradient(#DC5E43, #C83F21);
+    background: linear-gradient(#DC5E43, #C83F21);
+    text-align: justify;
+    text-justify: inter-word;
+}
