@@ -1,0 +1,117 @@
+﻿body {
+  padding: 3;
+  margin: 3;
+  padding-bottom: 0;
+  	background: #3facd3; 
+    background: -webkit-linear-gradient(#464CF3, #090C68); 
+    background: -o-linear-gradient(#464CF3, #090C68); 
+    background: -moz-linear-gradient(#464CF3, #090C68); 
+    background: linear-gradient(#464CF3, #090C68); 
+}
+.rightschedule {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.content{
+	resize: horizontal;
+	overflow: hidden;
+	height: 700px;
+	width: 80%;
+	margin: 0 auto;
+	padding-left: 0.25em 0.625em;
+	padding-top: 0.25em 0.625em;
+	padding-bottom: 0.25em 0.625em;
+	border-radius: 30px;
+    border: 2px solid #E5AE22;
+	border-style: dotted dashed dotted dashed;
+	background: #118c4e; 
+    background: -webkit-linear-gradient(#DC5E43, #C83F21);
+    background: -o-linear-gradient(#DC5E43, #C83F21); 
+    background: -moz-linear-gradient(#DC5E43, #C83F21);
+    background: linear-gradient(#DC5E43, #C83F21);
+}
+
+.header {
+  background-position: center center;
+}
+
+.nav{
+    list-style-type: none;
+    display: flex;
+	float:left;
+	overflow: vertical;
+}
+
+li  {
+	list-style-type: none;
+    padding: 0 5px;
+	padding-top: 10px;
+	line-height: 28px;
+	font-family: 'Sansita', sans-serif;
+	font-size: 24px;
+	font-weight: 60;
+}
+
+h1 {
+	text-shadow: 2px 2px #DC5E43;
+  color: #C83F21;
+	font-family: 'Bahiana', cursive;
+  font-size: 100px;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 15%;
+  padding-left: 285px;
+}
+
+h2 {
+  color: #E4BB97;
+  font-family: 'Sansita', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+p {
+	text-indent: 40px;
+  margin: 15px 0px;
+  padding-right: 100px;
+  padding-left: 150px;
+  display: flex;
+  justify-content: center;
+  text-shadow: .5px .5px #E5AE22;
+  color: #FFF9F5;
+  line-height: 28px;
+  font-family: 'Sansita', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+@media only screen and (max-width: 800px) {
+p { font-size:100%;}
+} 
+
+@media only screen and (max-width: 1100px) {
+p{ font-size:120%;}
+}
+
+.footer{
+	resize: vertical;
+	overflow: auto;
+	height: 20px;
+	width: 100%;
+  margin: 0 auto;
+	border-radius: 25px;
+	background: #118c4e; 
+    background: -webkit-linear-gradient(#DC5E43, #C83F21);
+    background: -o-linear-gradient(#DC5E43, #C83F21); 
+    background: -moz-linear-gradient(#DC5E43, #C83F21);
+    background: linear-gradient(#DC5E43, #C83F21);
+font-family: 'Sansita', sans-serif;
+}
+
