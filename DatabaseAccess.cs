@@ -13,7 +13,7 @@ public class DatabaseAccess
     public string[,] SelectAll(String DBConnectString,string[] rows,string table)
     {
         string TableInfo = "Select * from " + table;
-        string[,] tableData=new string[1001,7];
+        string[,] tableData=new string[1001,8];
         int i, j;
         i = 0;
         j = 0;
@@ -51,7 +51,7 @@ public class DatabaseAccess
     public string[,] SearchAll(String DBConnectString, string[] rows, string table,string rowcompair,string keyword)
     {
         string TableInfo = "Select * from " + table+" Where "+rowcompair+" = "+keyword;
-        string[,] tableData = new string[1001, 7];
+        string[,] tableData = new string[1001, 8];
         int i, j;
         i = 0;
         j = 0;
