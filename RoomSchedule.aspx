@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentRegistration.aspx.cs" Inherits="StudentLogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RoomSchedule.aspx.cs" Inherits="StudentLogin" %>
 
 <!DOCTYPE html>
 
@@ -12,10 +12,6 @@
     <form id="form1" runat="server">
     <div style="height: 250px; width: 300px; -webkit-flex: 1; flex: 1; border: 2px solid; text-align:center; 	margin: 0 auto; padding-left: 0.25em 0.625em; padding-top: 0.25em 0.625em; padding-bottom: 0.25em 0.625em; border-radius: 30px; background-color: #808080; font-family: 'Sansita', sans-serif;">
         <br/>
-        <asp:RegularExpressionValidator runat=server display=dynamic
-            controltovalidate="Name" 
-            errormessage="Your name cannot have numbers!" 
-            validationexpression="[a-zA-Z' ']{5,}" /><br/>
         Name 
         <asp:TextBox ID=Name runat="server"></asp:TextBox><br/><br/>
         <asp:RegularExpressionValidator runat=server display=dynamic

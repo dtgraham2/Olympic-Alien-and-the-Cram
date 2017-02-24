@@ -19,7 +19,7 @@
 .content{
 	resize: horizontal;
 	overflow: hidden;
-	height: 700px;
+	height: 1000px;
 	width: 80%;
 	margin: 0 auto;
 	padding-left: 0.25em 0.625em;
@@ -100,18 +100,4 @@ p { font-size:100%;}
 p{ font-size:120%;}
 }
 
-.footer{
-	resize: vertical;
-	overflow: auto;
-	height: 20px;
-	width: 100%;
-  margin: 0 auto;
-	border-radius: 25px;
-	background: #118c4e; 
-    background: -webkit-linear-gradient(#DC5E43, #C83F21);
-    background: -o-linear-gradient(#DC5E43, #C83F21); 
-    background: -moz-linear-gradient(#DC5E43, #C83F21);
-    background: linear-gradient(#DC5E43, #C83F21);
-font-family: 'Sansita', sans-serif;
-}
 

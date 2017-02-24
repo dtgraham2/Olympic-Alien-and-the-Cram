@@ -12,9 +12,13 @@
     <form id="form1" runat="server">
     <div style="height: 200px; width: 300px; border: 2px solid; text-align:center; 	margin: 0 auto; padding-left: 0.25em 0.625em; padding-top: 0.25em 0.625em; padding-bottom: 0.25em 0.625em; border-radius: 30px; background-color: #808080; font-family: 'Sansita', sans-serif;">
         <br/><br/><br/>
+            <asp:RegularExpressionValidator runat=server display=dynamic
+            controltovalidate="txtID" 
+            errormessage="UserID must be numeric!" 
+            validationexpression="^[0-9]+$" /><br/>
         User ID
-        <asp:TextBox ID=TextBox1 runat="server"></asp:TextBox>
-        <br/><br/><br/><asp:Button ID=Button1 runat="server" Text="Login"  Height="50"  Width="100"/><br/>
+        <asp:TextBox ID=txtID runat="server"></asp:TextBox>
+        <br/><asp:Button ID=Submit runat="server" Text="Login"  Height="50"  Width="100"/><br/>
                     <a href="index.htm">Back</a>
             </div>
     </form>
