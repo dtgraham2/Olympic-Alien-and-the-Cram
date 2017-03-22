@@ -1,0 +1,83 @@
+string dbConnection = "Data Source=stusql; Integrated Security=True;";
+            string[,] Tables = new String[1001, 30];
+            DatabaseAccess Data = new DatabaseAccess();
+            string keyword = "studentID";
+            string filter = (string)Session["ID"];
+        int classesaWeek = 0;
+        int day = 0;
+        //bool isNumber = true;
+        //try
+        //{
+        int filtCheck = int.Parse(filter);
+        if (filter == null)
+        {
+            filter = "1";
+        }
+        bool checks= true;
+        int i = 0;
+        string[] rows = { "studentID", "firstName", "LastName", "SSN", "Birthday", "CurrentQuarter", "GPA" };
+        string[] rows2 = { "CourseID", "ClassName", "HoursPerWeek", "ClassNumber", "LabNumber", "QuarterTaken","RoomNumber" };
+        string tablename = "currentStudents";
+        Tables = Data.SearchAllSchedule(dbConnection, rows, tablename, keyword, filter );
+        string[,] Classes = new String[1001, 30];
+        Classes = Data.SearchAllSchedule(dbConnection, rows2, "Classes", rows2[5], Tables[0,6]);
+        string[] Times = { "10:30-12:20", "12:30-2:20", "2:40-4:30" };
+        string[] Days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+        string[,] Schedule = new string[5, 3];
+        while (checks == true)
+        {
+            try
+            {
+                int hoursForClass;
+                hoursForClass = int.Parse(Classes[i, 3]);
+
+                if (hoursForClass == 10)
+                {
+                    classesaWeek = 5;
+                }
+                if (hoursForClass == 6)
+                {
+                    classesaWeek = 3;
+                }
+                if (hoursForClass == 4)
+                {
+                    classesaWeek = 2;
+                }
+                if (hoursForClass == 2)
+                {
+                    classesaWeek = 1;
+                }
+
+            }
+            catch
+            {
+                return;
+            }
+            while (classesaWeek != 0)
+            {
+                
+                if (Schedule[day, 0] == null)
+                {
+                    Schedule[day, 0] = Days[day] + "\t" + Times[0] + "\t" + Classes[i, 2]+"\t"+ Classes[i, 7];
+                    
+                }
+                else if (Schedule[day, 1] == null)
+                {
+                    Schedule[day, 1] = Days[day] + "\t" + Times[1] + "\t" + Classes[i, 2] + "\t" + Classes[i, 7];
+                    
+                }
+                else if (Schedule[day, 2] == null)
+                {
+                    Schedule[day, 2] = Days[day] + "\t" + Times[2] + "\t" + Classes[i, 2] + "\t" + Classes[i, 7];
+                    
+                }
+                day++;
+                classesaWeek--;
+               
+                
+            }
+            i++;
+            if (Classes[i, 3] == null)
+                checks = false;
+            day = 0;
+        }
